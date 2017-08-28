@@ -5,13 +5,9 @@ background-repeat: no-repeat;
 
 }
 
-h1 {
-	color: white;
-	font-weight: bold;
-}
 
 .readable {
+	color: white;
+	font-weight: bold;
 	background: rgba(54, 25, 25, .8);
-	
-	
 }
