@@ -1,9 +1,17 @@
 body {
-background-image: url(http://i.imgur.com/4ehGQet.jpg);
+background-image: url(https://media.8ch.net/file_store/64d56157a8a27d756390e560c97e94bc44103b7e3aff28b7fc0671737b69034d.jpg);
+background-size:cover;
 background-repeat: no-repeat;
-//background-size: 100% 100%;
-//background-size: contain;
+
 }
-h1{
-   color:white;
+
+h1 {
+	color: white;
+	font-weight: bold;
+}
+
+.readable {
+	background: rgba(54, 25, 25, .8);
+	
+	
 }
