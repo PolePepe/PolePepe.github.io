@@ -53,6 +53,7 @@ div.newspaper
 .border 
 {
     border-style: groove;
+    
 }
 .border img
 {
@@ -62,16 +63,22 @@ div.newspaper
     border-style: dotted;
     border-color: fuchsia;
     margin-bottom: 50px;
+    margin: auto;
+    width: 40%;
+    display: block;
 }
 .border pre
 {
+    display: block;
+    margin: auto;
     text-align: center;
-    border-style: dotted;
+    border-style: ridge;
+    border-width: 3rem;
     background-color: black;
     opacity: 0.6;
     color: cyan;
-    margin-right: 50%;
-    
+    width: 50%;
+    padding: 10%;
 }
 
 a
