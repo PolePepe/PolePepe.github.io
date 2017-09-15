@@ -95,3 +95,8 @@ a:visited
     color: #f00;
 }
 a:hover { color: #bbbbbb; }
+
+:hover {
+    background-color: rgba(39, 194, 14, 0.4);
+    border: 5px groove fuchsia;
+}
