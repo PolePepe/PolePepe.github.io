@@ -3,9 +3,14 @@ body {
 background-size:cover;
 background-repeat: no-repeat;
 */
+    background-image: url(" https://i.imgur.com/G4nomNL.jpg ")
+
 }
 
-
+p
+{
+    font-size: x-large; font-weight: bold;
+}
 .readable {
 	color: white;
 	font-weight: bold;
