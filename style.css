@@ -3,7 +3,7 @@ body {
 background-size:cover;
 background-repeat: no-repeat;
 */
-    background-image: url(" https://i.imgur.com/G4nomNL.jpg ");
+    background-image: url(" https://static.pexels.com/photos/235994/pexels-photo-235994.jpeg");
     background-size: contain;
 
 }
@@ -36,6 +36,7 @@ div.newspaper
     
 }
 
+
 #britfeel
 {
     text-align: right;
@@ -43,8 +44,46 @@ div.newspaper
     background-image: url("https://media.8ch.net/britfeel/src/1430419213164.gif");
     border: 2px solid red;
     opacity: 0.6;
-    margin: 10%;
+    //margin: 10%;
     background-size: cover;
-    
+    height: 100vh;   
+}
+
+
+.border 
+{
+    border-style: groove;
+}
+.border img
+{
+    background-image: url(https://static.pexels.com/photos/36753/flower-purple-lical-blosso.jpg);
+    opacity: 0.6;
+    border-width: 1em;
+    border-style: dotted;
+    border-color: fuchsia;
+    margin-bottom: 50px;
+}
+.border pre
+{
+    text-align: center;
+    border-style: dotted;
+    background-color: black;
+    opacity: 0.6;
+    color: cyan;
+    margin-right: 50%;
     
 }
+
+a
+{
+    color: #20c20e;
+    border-width: 10em;
+    font-family: monospace;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:visited 
+{
+    color: #f00;
+}
+a:hover { color: #bbbbbb; }
