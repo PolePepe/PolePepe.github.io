@@ -36,7 +36,15 @@ div.newspaper
     
 }
 
-#egg
+#britfeel
 {
-    font-weight: 900;
+    text-align: right;
+    text-decoration-line: overline;
+    background-image: url("https://media.8ch.net/britfeel/src/1430419213164.gif");
+    border: 2px solid red;
+    opacity: 0.6;
+    margin: 10%;
+    background-size: cover;
+    
+    
 }
