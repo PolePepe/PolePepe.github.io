@@ -4,7 +4,7 @@ background-size:cover;
 background-repeat: no-repeat;
 */
     background-image: url(" https://i.imgur.com/G4nomNL.jpg ");
-    background-size: cover;
+    background-size: contain;
 
 }
 
@@ -16,4 +16,27 @@ p
 	color: white;
 	font-weight: bold;
 	background: rgba(54, 25, 25, .8);
+}
+
+h3 em 
+{
+    font-size: 3em;
+}
+
+.imprint
+{
+    color:crimson; font-weight: bold; font-style:oblique;
+}
+
+div.newspaper
+{
+    text-align: center;
+    font-family: monospace;
+    background: rgba(10,100,100,.5);
+    
+}
+
+#egg
+{
+    font-weight: 900;
 }
