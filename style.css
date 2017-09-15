@@ -66,6 +66,7 @@ div.newspaper
     margin: auto;
     width: 40%;
     display: block;
+    padding: 10%;
 }
 .border pre
 {
