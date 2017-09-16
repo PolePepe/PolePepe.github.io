@@ -14,8 +14,10 @@ width: 33%; }
 .bottom { clear: both; }
     
     p {
-        opacity: 0;
+        opacity: 1;
     }
+    p:before { content: "<"}
+    p:after { content: ">"}
     
     p:first-letter{
         font-size: 300%;
@@ -30,7 +32,7 @@ width: 33%; }
         background-position: center;
         
         font-weight: bold;
-        padding: 6em;
+        //padding: 6em;
         float: right;
         display: block;
         margin: auto;
@@ -62,5 +64,8 @@ but as a possession for all time.
 <p class="bottom">
 Jahans is frequently seen with a roll of toilet papers behind him in the videos, sometimes pre-rolled out on his bed in what he referred to as a "landing strip" for when he fancies a wank. Wads of used toilet paper can be seen carelessly thrown about his room. The bog roll has become such a point of interest from the fans/hate base that if it is NOT seen in the video, questions arise. This led to Jahans giving us all a lesson on camera perspective, showing off that he has masterfully hidden the roll on his bed behind his large body.
 </p>
+    <br>
+    <hr width=50%>
+    <p>IF AN IMAGE IS PURELY DECORATIVE IT CAN GO IN CSS, else perhaps it's better in the html</p>
 </body>
 </html>
