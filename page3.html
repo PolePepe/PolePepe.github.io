@@ -1,46 +1,98 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="icon" href="http://i.imgur.com/9nWiCO4.png">
-	<!--Comment example-->
-      <meta charset="UTF-8">
-    <title>Pacifistic Genocide</title>
-  </head>
-    
-    <body>
-        <h1 class="readable"> Cascading: body>div>tag>class>id</h1>
-        <h3> hello <em>this</em> is an em test.</h3>
-        <h3> The <em>style sheet</em> specifies that <em>em tags</em><br>
-        will be large in the h3s.</h3>
-        
-        <p class="imprint">hello this is imprint</p>
-        <div class="newspaper">
-            <p class="imprint">Hello this is another attempt.</p>
-            <p class="imprint">and this is another <br>attempt......
-            </p>
-            <p>hello this is a reminder<br> .is for class and can be reused<br>and a # is for ID and should be used once.</p>
-            
-            <pre id="britfeel">Lorum Ipsum.
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            loading tbh
-            
-            i'm not 100% sure why thisline extends further than the text.
-            
-            REE
-            </pre>
-            <p> Nothing <a href = "page2.html"> nothing </a> to say... </p>
-        </div>
-        
-    </body>
+<head>
+<title>Navigation Menus</title>
+<style>
+#navigationBar {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    width: 90%;
+}
 
+#navigationBar ul {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    list-style-type: none;
+    background-color: #eeeeee;
+    overflow: visible;
+}
+#navigationBar ul > li {
+    display: block;
+    float: left;
+    height: auto;
+    /* menu header's items width */
+    width: 120px;
+}
+#navigationBar li > a {
+    display: block;
+    padding: 0 0 0 10px;
+    height: 100%;
+    width: 109px;
+    border-right: 1px black solid;
+    line-height: 30px;
+    font-family: sans-serif;
+    font-size: 17px;
+    text-decoration: none;
+    background-color: #eeeeee;
+    color: #5d5636;
+}
+#navigationBar ul ul {
+    margin-top: 2px;
+    display: none;
+    position: static;
+    height: auto;
+    width: 160px;
+    border: 1px #666666 solid;
+    background-color: #dddddd;
+}
+#navigationBar ul ul li {
+    position: relative;
+    float: none;
+    display: block;
+    height: 28px;
+    width: 100%;
+    border: none;
+}
+#navigationBar ul ul li > a {
+    height: 100%;
+    width: 96%;
+    padding: 0 0 0 4%;
+    line-height: 28px;
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    font-size: 12px;
+    font-style: normal;
+}
+#navigationBar li:hover > a {
+    color: #220000;
+    background-color: #eeeabe;
+}
+#navigationBar li:hover > ul {
+    display: block;
+}
+</style>
+    
+</head>
+<body>
+<h1>A Typical Web Site</h1>
+<nav id="navigationBar">
+    <ul>
+        <li><a href="https://polepepe.github.io/im.html">THESE</a></li>
+            <ul>
+                <li><a href="https://polepepe.github.io/im.html">LINKS</a></li>
+                <li><a href="https://polepepe.github.io/im.html">ARE</a></li>
+                <li><a href="https://polepepe.github.io/im.html">ALL</a></li>
+            </ul>
+        <li><a href="https://polepepe.github.io/im.html">THESE</a></li>
+        <li><a href="https://polepepe.github.io/im.html">THESE</a></li>
+    
+    </ul>
+</body>
+</html>
 </html>
