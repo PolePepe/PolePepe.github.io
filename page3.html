@@ -18,7 +18,7 @@
     height: 100%;
     width: 100%;
     list-style-type: none;
-    background-color: #eeeeee;
+    background-color: #1ac;
     overflow: visible;
 }
 #navigationBar ul > li {
@@ -38,17 +38,19 @@
     font-family: sans-serif;
     font-size: 17px;
     text-decoration: none;
-    background-color: #eeeeee;
+    background-color: #d44;
     color: #5d5636;
+    font-weight: bold;
 }
 #navigationBar ul ul {
     margin-top: 2px;
     display: none;
-    position: static;
+    position: relative;
     height: auto;
     width: 160px;
     border: 1px #666666 solid;
     background-color: #dddddd;
+    top: 0.5rem;
 }
 #navigationBar ul ul li {
     position: relative;
@@ -57,6 +59,7 @@
     height: 28px;
     width: 100%;
     border: none;
+    
 }
 #navigationBar ul ul li > a {
     height: 100%;
@@ -79,20 +82,24 @@
 </style>
     
 </head>
-<body>
-<h1>A Typical Web Site</h1>
-<nav id="navigationBar">
-    <ul>
-        <li><a href="https://polepepe.github.io/im.html">THESE</a></li>
-            <ul>
-                <li><a href="https://polepepe.github.io/im.html">LINKS</a></li>
-                <li><a href="https://polepepe.github.io/im.html">ARE</a></li>
-                <li><a href="https://polepepe.github.io/im.html">ALL</a></li>
-            </ul>
-        <li><a href="https://polepepe.github.io/im.html">THESE</a></li>
-        <li><a href="https://polepepe.github.io/im.html">THESE</a></li>
     
-    </ul>
+<body>
+<h1>[test] is a drop down</h1>
+<nav id="navigationBar">
+<ul>
+<li><a href="https://polepepe.github.io/im.html">link</a></li>
+<li><a href="https://polepepe.github.io/im.html">test</a>
+<ul>
+    <li><a href="https://polepepe.github.io/im.html">THESE</a></li>
+    <li><a href="https://polepepe.github.io/im.html">LINKS</a></li>
+    <li><a href="https://polepepe.github.io/im.html">ARE ALL</a></li>
+    <li><a href="https://polepepe.github.io/im.html">THE SAME!</a></li>
+
+</ul>
+
+</nav>
+<p> web site content.</p>
+    <p> ...honestly, this css is mainly copied from page 300ish</p>
 </body>
-</html>
+
 </html>
