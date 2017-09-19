@@ -1,65 +1,169 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-<title>A Typical Website</title>
-    
-    <style>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ts</title>        
+        <link rel="icon" href="http://images.clipartpanda.com/pig-face-clipart-pig-head-md.png">
         
-        html, body, * { margin: 0; }
+        <!--
+            Striking and siple colour scheme: #0b0c10(black), #1f2833 (dark grey/blue), #c5c6c7(light grey), #66fcf1 (cyanish - defining colour), #45a29e (muted of the former).
+        -->
         
-        .central {
-            width: 6rem;
-            margin: auto;
-            border: 3px solid #c33;
-            //padding: 3em;
+        
+        <style>
             
-        }
-    
-        iframe{
-            width: 100%;
-            margin: 0 auto;
+            *{
+                box-sizing: border-box;
+            }
+            .row::after{
+                /*psuedo elements are followed by ::, elements by : */
+                
+                content: ""; /*insert nothing after --after is the pseudo element-- every row*/
+                clear: both; /*clear from both sides, interupts conventional flow: left to right, top to bottom */
+                display: block; /*element will be it's own block*/
+            }
             
-        }
-        
-        p#cd{
-            border: 1px dotted black;
-            text-align: center;
-        }
-        
-    </style>
-</head>
-<body>
-<div id="header">
-<h1>CHAPTER ON MULTIMEDIA </h1>
-<div class="nav" id="topmenu">
-<ul>
-<li><a href="/">Home</a></li>
-<li><a href="/products.html">Products</a></li>
-<li><a href="/about.html">About</a></li>
-<li><a href="/contact.html">Contact</a></li>
-</ul>
-</div>
-</div>
-<div id="article">
-<h2>A Headline</h2>
-<p>The text of an article.</p>
-<div class="aside">
-<p>This is an aside.</p>
-</div>
-<p>More article text.</p>
-</div>
-    <div class="central">
-        <p id="cd">hello to be honest</p>
-        
-    </div>
-    
-    
+            [class*="col-"]{
+                /* *= operator, in this case means any(*) class that contains(=) the string "col-". 
+                    See syntax pattens for CSS */
+                float: left;
+                padding: 1rem;
+            }
+            
+            html {
+                font-family: "Courier New", Courier, monospace; /* Lists here are fallbacks, the first font will be selected if available, if not the following font and so on.
+                    Best practice is to culminate with a safe font. */
+                background-color: #c5c6c7;
+            }
+            
+            header {
+                background-color: #45a29e;
+                color: #0b0c10;
+                padding: 1rem;
+                text-align: center;
+                border: 0.5rem solid #45a29e;
+                border-radius: 1rem;
+                margin-bottom: 0.5rem;
+            }
+            footer {
+                position: fixed;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                
+                background-color: #0b0c10;
+                color: #c5c6c7;
+                padding: 1rem;
+                font-size: 1.2rem;
+                font-weight: 500;
+                text-align: center;
+            }
+            hr {
+                width: 75%;
+                opacity: 0.5;
+            }
+            
+            .menu ul {
+                /* Elements can belong to multiple classes - <div class="c1 c2"> will belong to class c1 and c2.
+                    Which ever is declared last in the style sheer gets priority.*/
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .menu li {
+                padding: 0.5rem;
+                border: 1px black solid;
+                margin-bottom: 0.5rem;
+                background-color: #1f2833;
+                color: #66fcf1;
+                font-weight: 800;
+                box-shadow: 0 4px 4px rgba(69, 162, 158, 0.4);
+            }
+            .menu li:hover {
+                background-color: #45a29e;
+                color: black;
+            }
+            
+            .sidebar{
+                background-color: #1f2833;
+                color: #66fcf1;
+                font-weight: 300;
+                text-align: center;
+                font-size: 0.9rem;
+                padding: 1rem;
+            }
+            
+            /*Desktop Dimenstion*/
+            /*Broken into 12, 100/12 = 8.33 (2dp) - Common */
+            
+            .col-1{width: 8.33%}
+            .col-2{width: 16.66%}
+            .col-3{width: 25%}
+            .col-4{width: 33.33%}
+            .col-5{width: 41.66%}
+            .col-6{width: 50%}
+            .col-7{width: 58.33%}
+            .col-8{width: 66.66%}
+            .col-9{width: 75%}
+            .col-10{width: 83.33%}
+            .col-11{width: 91.66%}
+            .col-12{width: 100%}
+            
+            @media only screen and (max-width: 768px){
+                /*768px is the Apple Ipad cutodd*/
+                [class*="col-"]{
+                    width: 100%;
+                }
+            }
 
+            
+        </style>
+    
+    </head>
+    
+    <body>
+        <header>
+            <h1>A site for mobile and pc</h1>
+        </header>
+        
+        <!-- reminder to style individual section -->
+        
+        <div class="row">
+    
+            <div class="col-3 menu"> 
+                <ul>
+                    <li>option</li>
+                    <li>option</li>
+                    <li>option</li>
+                    <li>option</li>
+                </ul>
+            </div>
+
+            <div class="col-6">
+                <h1>Page content</h1>
+                <p> This is a bunch of information about the site, please disregard untli we have actual information in the site. Have a nice day</p>
+            </div>
+            
+            <div class="col-3">
+                <div class="sidebar">
+                    <h2>Thing</h2>
+                    <p>Things elaboration</p>
+                    <hr>
+                    <h2>Thing</h2>
+                    <p>Things elaboration</p>
+                    <hr>
+                    <h2>Thing</h2>
+                    <p>Things elaboration</p>
+                </div>
+            </div>
+            
+        </div>
         
         <footer>
-    Copyright 2015-2016
-    </footer>
-</body>
+            <p>FOOTER MESSAGE</p>
+        </footer>
+        
+    </body>
+
 </html>
