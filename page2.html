@@ -146,8 +146,8 @@
     
             <div class="col-3 menu"> 
                 <ul>
-                    <li onclick="document.getElementById('him').style.display='block'">Show him</li>
-                    <li onclick="document.getElementById('him').style.display='none'">Hide him</li>
+                    <li>Click him</li>
+                    
 
                 </ul>
             </div>
@@ -155,7 +155,8 @@
             <div class="col-6">
                 <h1>be careful tbh</h1>
                 <p> ... </p>
-                <img id="him" src="https://vignette3.wikia.nocookie.net/jahanspedia/images/8/87/042.jpg/revision/latest?cb=20170221213137" alt="him." width="100%" style="display: none">
+                <img id="him" src="https://vignette3.wikia.nocookie.net/jahanspedia/images/8/87/042.jpg/revision/latest?cb=20170221213137" alt="him." width="100%" >
+                <img id="him2" src="https://yt3.ggpht.com/-xSXQk81CrBE/AAAAAAAAAAI/AAAAAAAAAAA/TRuqQCfVhso/s900-c-k-no-mo-rj-c0xffffff/photo.jpg" alt="him." width="100%">
             </div>
             
             <div class="col-3">
@@ -178,7 +179,19 @@
         <footer>
             <p>FOOTER MESSAGE</p>
         </footer>
-    
+        
+        <script src="jquery-3.2.1.slim.min.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            /*loading in jquery library from this directory followed by a script taag.*/
+            $(function(){
+                $("#him").hide();
+                $("#him, #him2").click(function(event){
+                    $("#him, #him2").toggle();
+                });
+            });
+        </script>
+        
+        
     </body>
 
 </html>

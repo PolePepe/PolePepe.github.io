@@ -1,127 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Navigation Menus</title>
-<style>
-#navigationBar {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    height: 30px;
-    width: 90%;
-}
-
-#navigationBar ul {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    list-style-type: none;
-    background-color: #1ac;
-    overflow: visible;
-}
-#navigationBar ul > li {
-    display: block;
-    float: left;
-    height: auto;
-    /* menu header's items width */
-    width: 120px;
-}
-#navigationBar li > a {
-    display: block;
-    padding: 0 0 0 10px;
-    height: 100%;
-    width: 109px;
-    border-right: 1px black solid;
-    line-height: 30px;
-    font-family: sans-serif;
-    font-size: 17px;
-    text-decoration: none;
-    background-color: #d44;
-    color: #5d5636;
-    font-weight: bold;
-}
-#navigationBar ul ul {
-    margin-top: 2px;
-    display: none;
-    position: relative;
-    height: auto;
-    width: 160px;
-    border: 1px #666666 solid;
-    background-color: #dddddd;
-    
-}
-#navigationBar ul ul li {
-    position: relative;
-    float: none;
-    display: block;
-    height: 28px;
-    width: 100%;
-    border: none;
-    
-}
-#navigationBar ul ul li > a {
-    height: 100%;
-    width: 96%;
-    padding: 0 0 0 4%;
-    line-height: 28px;
-    background-color: transparent;
-    border: none;
-    color: #000000;
-    font-size: 12px;
-    font-style: normal;
-}
-#navigationBar li:hover > a {
-    color: #220000;
-    background-color: #eeeabe;
-}
-#navigationBar li:hover > ul {
-    display: block;
-}
-    
-    #wizard{
-        position: fixed;
-        right: 0px;
-        top: 0px;
-    }
-
-</style>
-    
+<title>jQuery Example</title>
 </head>
-    
 <body>
-<h1>[test] is a drop down</h1>
-<nav id="navigationBar">
-<ul>
-<li><a href="https://polepepe.github.io/im.html">link</a></li>
-<li><a href="https://polepepe.github.io/im.html">test</a>
-<ul>
-    <li><a href="https://polepepe.github.io/im.html">THESE</a></li>
-    <li><a href="https://polepepe.github.io/im.html">LINKS</a></li>
-    <li><a href="https://polepepe.github.io/im.html">ARE ALL</a></li>
-    <li><a href="https://polepepe.github.io/im.html">THE SAME!</a></li>
-    <li><a href="https://polepepe.github.io/im.html">THE AJSHJLKGSDF!</a></li>
-
-</ul>
-    
-
-</nav>
-<p> web site content.</p>
-    <p> ...honestly, this css is mainly copied from page 300ish</p>
-    
-    <div style= "width: 10%; padding:10%">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula dui at risus condimentum, a ullamcorper odio fermentum. Fusce venenatis nisi at nisi vehicula, sollicitudin ultrices quam varius. Nam sagittis est sit amet dolor eleifend pulvinar. Quisque lacinia sapien diam, ut facilisis ex fringilla non. Curabitur non ex justo. Phasellus in faucibus felis, non sodales augue. Curabitur et augue enim. Donec auctor lacus ipsum, ut pulvinar magna iaculis quis. Sed condimentum tempus felis, sit amet aliquet turpis fringilla et. Nam rutrum nibh eu risus tempus, a tempor diam egestas. Aenean commodo ligula orci, eget porttitor arcu blandit et.
-
-Nulla blandit massa venenatis magna viverra vehicula. Pellentesque vel elit dui. Nam gravida risus eros, id luctus sem vehicula vitae. Sed laoreet orci quis tempus suscipit. Sed mollis ornare sem, a consectetur dui. Quisque at ultrices ante, at suscipit tortor. Cras mollis auctor iaculis. Pellentesque sed odio ut nisi dictum convallis. Nullam ultrices neque feugiat tincidunt tempor. Integer in tristique purus, vitae consectetur libero. Fusce nunc ex, ultrices ut erat vel, tincidunt feugiat dui.
-
-Quisque vel quam at elit sollicitudin aliquam ut quis est. Etiam ipsum tellus, tincidunt nec lacus at, sagittis finibus lacus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Vivamus id quam lectus. In molestie arcu eget sapien lobortis, eget blandit nulla feugiat. Integer vitae ex vitae lacus tempor lacinia. Vestibulum pulvinar lacinia libero, et congue est fermentum sit amet.
-
-Donec eget dui non leo elementum ornare. Curabitur fermentum nisl eget mauris pretium, auctor tincidunt nibh hendrerit. Vivamus porta lobortis pulvinar. In suscipit, arcu id pulvinar varius, mi lacus dapibus justo, ut lacinia purus magna quis sapien. Mauris sit amet massa sed libero pellentesque suscipit nec quis massa. Nulla fermentum, quam eget lobortis eleifend, nisi sem bibendum est, nec sagittis dui purus quis neque. Duis vitae sapien eu turpis condimentum interdum. Mauris facilisis molestie diam, pellentesque commodo nulla fringilla vel.
-
-Quisque viverra lacus rutrum quam congue cursus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut pretium, nisl in fermentum accumsan, velit felis malesuada risus, at porta justo nisi non libero. Aliquam vulputate tincidunt erat, faucibus sodales orci faucibus sed. Vestibulum vel est eu tortor tincidunt finibus id sollicitudin quam. Donec blandit diam et ultricies posuere. Proin in diam id risus faucibus ultricies. Donec ultrices posuere tellus at tempus. Ut pulvinar diam id felis tincidunt, dapibus faucibus magna rhoncus.</p>
-    </div>
-    <img id="wizard" src="https://cdn.pixabay.com/photo/2016/06/13/14/57/wizard-1454385_960_720.png" alt="Wizard" height ="200rem">
+<a href="index.html">A link</a>
+<a href="https://www.youtube.com/watch?v=Aaehn1aY8Ig">Anuda link</a>
+<script src="jquery-3.2.1.slim.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+    $("a").click(function(event) {
+                alert("YOU CLICKED A LINK TO "+this.href);
+                 });
+</script>
 </body>
-
 </html>
