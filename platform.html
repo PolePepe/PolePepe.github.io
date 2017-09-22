@@ -11,11 +11,37 @@
             
             --took out type="text/javascript" from first style tag, fadeout is not working.*/
 
+            var app = new PIXI.Application(800, 600, {backgroundColor : 0x1099bb});
+document.body.appendChild(app.view);
+
+// create a new Sprite from an image path
+var bunny = PIXI.Sprite.fromImage('ZombieMurka.png')
+
+// center the sprite's anchor point
+bunny.anchor.set(0.5);
+
+// move the sprite to the center of the screen
+bunny.x = app.renderer.width / 2;
+bunny.y = app.renderer.height / 2;
+
+app.stage.addChild(bunny);
+
+// Listen for animate update
+app.ticker.add(function(delta) {
+    // just for fun, let's rotate mr rabbit a little
+    // delta is 1 if running at 100% performance
+    // creates frame-independent tranformation
+    bunny.rotation += 0.1 * delta;
+});
+            
             
             /*
              page 5 of making games with javascript, have this page link to an inde one with this game on.
              Then read: http://dhmholley.co.uk/incrementals.html
             */
+            
+            
+            /*
             const renderer = new PIXI.autoDetectRenderer(
                 window.innerWidth,
                 window.innerHeight,
@@ -35,7 +61,7 @@
             sprite.x = window.innerWidth / 2
             sprite.y = window.innerHeight / 2
             
-            /*creation of root sprite contained called stage */
+            //creation of root sprite contained called stage 
             const stage = new PIXI.Container()
             stage.addChild(sprite)
             
@@ -64,6 +90,9 @@
                     this.sprite.y = this.y
                 }
             }
+            
+            */
+            
             
             
             

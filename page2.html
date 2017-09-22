@@ -197,48 +197,24 @@
         </footer>
         
         <script src="jquery-3.2.1.slim.min.js"></script>
-        <script src="pixi.js"></script>
+        <script src="pixi.min.js"></script>
         <script charset="utf-8">
-            /*loading in jquery library from this directory followed by a script taag.
             
-            --took out type="text/javascript" from first style tag, fadeout is not working.*/
-
-            $(function (){
-                $("p").mouseenter(function() {
-                    $(this).addClass("hovp");
-                });
-                $("p").mouseleave(function(){
-                    $(this).removeClass("hovp");
-                });
-            })
+            var app = new PIXI.Application(600,600, {backgroundColor: 0xc5c6c7});
+            document.body.appendChild(app.view);
             
-            /*
-             page 5 of making games with javascript, have this page link to an inde one with this game on.
-             Then read: http://dhmholley.co.uk/incrementals.html
-            */
-            const renderer = new PIXI.autoDetectRenderer(
-            window.innerWidth,
-            window.innerHeight,
-            {
-            "antialias": true,
-            "autoResize": true,
-            "transparent": true,
-            "resolution": 2,
-            },
-            )
-            document.body.appendChild(renderer.view)
-            const sprite = new PIXI.Sprite.fromImage(
-            "ZombieMurka.png",
-            )
-            sprite.x = window.innerWidth / 2
-            sprite.y = window.innerHeight / 2
-            const stage = new PIXI.Container()
-            stage.addChild(sprite)
-            const animate = function() {
-            requestAnimationFrame(animate)
-            renderer.render(stage)
-            }
-            animate()
+            var thinking = PIXI.Sprite.fromImage('Thinking_Face_Emoji_grande.png')
+            
+            thinking.anchor.set(0.5);
+            
+            thinking.x = app.renderer.width/2;
+            thinking.y = app.renderer.height/2;
+            
+            app.stage.addChild(thinking);
+            
+            app.ticker.add(function(delta){
+                thinking.rotation += 0.1*delta;
+            });
             
             
             
