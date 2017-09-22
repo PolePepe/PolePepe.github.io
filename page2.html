@@ -12,6 +12,15 @@
         
         <style type="text/css">
             
+            .hovp{
+                background-color: #555;
+                /*border: 1px dashed white;*/
+                color: #66fcf1;
+            }
+            input[name="email"] {color: #f99;}
+            
+            
+            
             *{
                 box-sizing: border-box;
             }
@@ -137,7 +146,7 @@
     
     <body>
         <header>
-            <h1>Page 496</h1>
+            <h1>Page 516</h1>
         </header>
         
         <!-- reminder to style individual section -->
@@ -153,22 +162,48 @@
             </div>
 
             <div class="col-6">
+                <!--main content-->
                 <h1>be careful tbh</h1>
-                <p> ... </p>
-                <img id="him" src="https://vignette3.wikia.nocookie.net/jahanspedia/images/8/87/042.jpg/revision/latest?cb=20170221213137" alt="him." width="100%" >
+                
+                <ul class="menu" id="testList" style="list-style-image: url(http://i.imgur.com/1PmpVEe.png)">
+                </ul>
+                
+                <form id="addElement">
+                    <label>New submission: <input name="liContent" size="40" /></label>
+                    <input type="submit" value="Add Item" />
+                
+                    <p style="text-align: center"><a id="clearList" href="#" style="color: #66fcf1; background-color: #0b0c10; " >clear list</a></p>
+                </form>
+                
+                <br>
+                <br>
+                
+                <form>
+                    <label>Email Address: <input name="email" value="example@example.biz" size="30"></label>
+                    <input id="emailFormSubmit" type="submit" disabled>
+                    
+                    
+                </form>
+                
+                <div id="him">
+                    <p> *get rid of the guns* </p>
+                    <img src="https://vignette3.wikia.nocookie.net/jahanspedia/images/8/87/042.jpg/revision/latest?cb=20170221213137" alt="him." width="100%" >
+                </div>
                 <img id="him2" src="https://yt3.ggpht.com/-xSXQk81CrBE/AAAAAAAAAAI/AAAAAAAAAAA/TRuqQCfVhso/s900-c-k-no-mo-rj-c0xffffff/photo.jpg" alt="him." width="100%">
+                
+                <p>...</p>
             </div>
             
             <div class="col-3">
                 <div class="sidebar">
-                    <h2>Thing</h2>
-                    <p>Things elaboration</p>
+                    <h2 id="t1">Editable list</h2>
+                    <p>Add list items, ignore the email box and jahans</p>
                     <hr>
-                    <h2>Thing</h2>
-                    <p>Things elaboration</p>
+                    <h2>Remove one item</h2>
+                    <p>Simply click a list item to remove it</p>
                     <hr>
-                    <h2>Thing</h2>
-                    <p>Things elaboration</p>
+                    <h2>Clear whole list</h2>
+                    <p>Click clear list to get rid of the whole list</p>
                 </div>
             </div>
             
@@ -183,12 +218,68 @@
         <script src="jquery-3.2.1.slim.min.js"></script>
         <script type="text/javascript" charset="utf-8">
             /*loading in jquery library from this directory followed by a script taag.*/
+
+            
             $(function(){
+                
                 $("#him").hide();
                 $("#him, #him2").click(function(event){
+
+                    $(this).css({'text-decoration': 'underline', 'color': '#fff', 'font-size': '2rem', 'font-weight': '900'});
                     $("#him, #him2").toggle();
                 });
             });
+            
+            $(function (){
+                $("p").mouseenter(function() {
+                    $(this).addClass("hovp");
+                });
+                $("p").mouseleave(function(){
+                    $(this).removeClass("hovp");
+                });
+            })
+            
+            $(function(){
+                $("input[name='email']").focus(function(){
+                    if($(this).val() == "example@example.biz"){
+                        $(this).val("");
+                        $(this).css("color","#000");
+                    }
+                });
+                $("input[name='email']").blur(function(){
+                    if ($(this).val()==""){
+                        $(this).val("example@example.biz");
+                        $(this).css("color","#f99");
+                        $("#emailFormSubmit").attr("disabled", "disabled");
+                    }
+                    else {
+                        $("#emailFormSubmit").removeAttr("disabled");
+                    }
+                });
+            });
+            
+            
+            //Script for the updateable list.
+            /*
+            $("#clearList").click(function(event){
+                event.preventDefault();
+                $("#testList").empty();
+            })
+            */
+            
+            $("#addElement").submit(function(event){
+                event.preventDefault();
+                $("#testList").append("<li>" + $("#addElement input[name='liContent']").val() + "</li>");
+                
+               $("#addElement [name='liContent']").val("...");
+            });
+
+            $(document).on('click', "#testList li", function () {
+                $(this).remove();
+            });
+
+            
+            
         </script>
         
         
