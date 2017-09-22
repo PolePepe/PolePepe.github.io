@@ -216,8 +216,10 @@
         </footer>
         
         <script src="jquery-3.2.1.slim.min.js"></script>
-        <script type="text/javascript" charset="utf-8">
-            /*loading in jquery library from this directory followed by a script taag.*/
+        <script charset="utf-8">
+            /*loading in jquery library from this directory followed by a script taag.
+            
+            --took out type="text/javascript" from first style tag, fadeout is not working.*/
 
             
             $(function(){
@@ -269,15 +271,20 @@
             
             $("#addElement").submit(function(event){
                 event.preventDefault();
-                $("#testList").append("<li>" + $("#addElement input[name='liContent']").val() + "</li>");
+                $("#testList").prepend("<li>" + $("#addElement input[name='liContent']").val() + "</li>");
                 
                $("#addElement [name='liContent']").val("...");
             });
+            
+            /*
 
             $(document).on('click', "#testList li", function () {
                 $(this).remove();
             });
-
+            */
+            $(document).on('click', '#testList li', function(){
+                $(this).fadeOut('slow');
+            });
             
             
         </script>
