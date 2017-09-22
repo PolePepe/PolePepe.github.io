@@ -164,6 +164,7 @@
             <div class="col-6">
                 <!--main content-->
                 <p>CS JavaScript &#38; JQuery</p>
+                <p>...</p>
                 <p style="text-align: center" id="userNum">...</p>
                 <button id="userAdd">Add</button>
                 <button id="userDouble">Double</button>
@@ -211,31 +212,10 @@
                 });
             })
             
-            $(document).ready(function(){
-                $("#userAdd").click(function(){
-                    $("#userNum").text(AddVar());
-                });
-            });
-            
-            $(document).ready(function(){
-                $("#userDouble").click(function(){
-                    $("#userNum").text(DoubleVar());
-                });
-            });
-            
-            var Avar=0;
-            
-            function AddVar(){
-                ++Avar;
-                return Avar;
-            }
-            
-            function DoubleVar(){
-                Avar*=2;
-                return Avar;
-            }
-            
             /*
+             page 5 of making games with javascript, have this page link to an inde one with this game on.
+             Then read: http://dhmholley.co.uk/incrementals.html
+            */
             const renderer = new PIXI.autoDetectRenderer(
             window.innerWidth,
             window.innerHeight,
@@ -248,7 +228,7 @@
             )
             document.body.appendChild(renderer.view)
             const sprite = new PIXI.Sprite.fromImage(
-            "path/to/sprites/player-idle.png",
+            "ZombieMurka.png",
             )
             sprite.x = window.innerWidth / 2
             sprite.y = window.innerHeight / 2
@@ -259,7 +239,7 @@
             renderer.render(stage)
             }
             animate()
-            */
+            
             
             
         </script>
