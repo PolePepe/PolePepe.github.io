@@ -196,30 +196,7 @@
             <p>FOOTER MESSAGE</p>
         </footer>
         
-        <script src="jquery-3.2.1.slim.min.js"></script>
-        <script src="pixi.min.js"></script>
-        <script charset="utf-8">
-            
-            var app = new PIXI.Application(600,600, {backgroundColor: 0xc5c6c7});
-            document.body.appendChild(app.view);
-            
-            var thinking = PIXI.Sprite.fromImage('Thinking_Face_Emoji_grande.png')
-            
-            thinking.anchor.set(0.5);
-            
-            thinking.x = app.renderer.width/2;
-            thinking.y = app.renderer.height/2;
-            
-            app.stage.addChild(thinking);
-            
-            app.ticker.add(function(delta){
-                thinking.rotation += 0.1*delta;
-            });
-            
-            
-            
-        </script>
-        
+
         
     </body>
 
