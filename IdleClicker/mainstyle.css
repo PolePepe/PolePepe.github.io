@@ -1,0 +1,17 @@
+body{
+    background-color: #bff;
+}
+p{
+    background-color: #fbf;
+    border: 1px solid black;
+    font-size: 2rem;
+    display: inline;
+    padding: 0 10px;
+}
+p:hover{
+    border: white 1px dashed;
+    background-color: #000;
+    color: #fbf;
+    border-radius: 20px;
+    transition: background-color 1s;
+}

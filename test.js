@@ -1,29 +1,20 @@
-/*
-var myHTML = document.querySelector('html');
-myHTML.onclick = function() {
-    alert('OHH!');
-};
-*/
+var myButton = document.querySelector('button');
+var myHeader = document.querySelector('h1');
 
-/*
-document.querySelector('html').onclick=function(){
-    alert('CLICKED!');
+
+function setUserName(){
+    var myName = prompt('Please enter yout name.');
+    localStorage.setItem('username', myName);
+    myHeader.textContent = "Name: " + myName;
 }
-*/
 
-var myImage = document.querySelector('img'); 
+if (!localStorage.getItem('username')){
+    setUserName();
+} else {
+    var storedName = localStorage.getItem('name');
+    myHeader.textContent = "Name: " +  storedName;
+}
 
-
-myImage.onclick = function() {
-    
-    var mySrc = myImage.getAttribute('src');
-    if (mySrc === 'https://www.flaginstitute.org/wp/wp-content/uploads/flags/UNKG0001.png'){
-        myImage.setAttribute('img', 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Civil_and_Naval_Ensign_of_France.svg/300px-Civil_and_Naval_Ensign_of_France.svg.png');
-        console.log('image changed');
-    } else {
-        alert('ree!');
-        myImage.setAttribute('img','ZombieMurka.png');
-        console.log('image changed back');
-    }
-    
+myButton.onclick = function(){
+    setUserName();
 }
