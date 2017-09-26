@@ -1,3 +1,18 @@
+.bgimage{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/75/Babylonian_marriage_market.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 200px;
+	margin-bottom: 5rem;
+}
+.bigheader{
+    color: #fff;
+    text-align: center;
+    font-size: 7vw;
+	font-weight: 900;
+	opacity: 0.5
+}
+
 .icon {
 	height: 150px;
 	max-width: 150px;
@@ -13,7 +28,6 @@
 .services section {
 	text-align: center;
 }
-
 
 
 .article:hover{
@@ -37,6 +51,9 @@
 		width: 100px;
 		object-fit: contain;
 	}
+	.bigheader{
+		font-size: 130px;
+	}
 
 }
 
@@ -49,17 +66,3 @@
   flex-direction: column;
 }
 
-.bgimage{
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/75/Babylonian_marriage_market.jpg);
-    background-position: center center;
-    background-size: cover;
-    height: 200px;
-	margin-bottom: 5rem;
-}
-.bigheader{
-    color: #fff;
-    text-align: center;
-    font-size: 7vw;
-	font-weight: 900;
-	opacity: 0.5
-}
