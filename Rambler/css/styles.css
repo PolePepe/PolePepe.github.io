@@ -1,0 +1,38 @@
+.icon {
+  
+  max-width: 150px;
+  margin: 0 auto;
+  display: block;
+}
+
+.art_pic{
+   border-radius: 50%;
+}
+
+.services section {
+  text-align: center;
+}
+
+
+
+.article:hover{
+	background-color: #444;
+	color: #eee;
+}
+
+@media(min-width: 1200px){
+	h3{
+		margin-top: 0px;
+	}
+	.services section{
+		text-align: left;
+	}
+	.article{
+		padding: 1rem 0;
+		border-bottom: 1px solid black;
+	}
+   .art_pic{
+	  width: 100px;
+	  height: 100px;
+   }
+}
