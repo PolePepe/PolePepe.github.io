@@ -1,16 +1,19 @@
 .bgimage{
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/75/Babylonian_marriage_market.jpg);
+	
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/4/4a/Hovhannes_Aivazovsky_-_The_Ninth_Wave_-_Google_Art_Project.jpg);
     background-position: center center;
     background-size: cover;
     height: 200px;
 	margin-bottom: 5rem;
+	border-bottom: 1px black solid;
 }
 .bigheader{
     color: #fff;
     text-align: center;
     font-size: 7vw;
 	font-weight: 900;
-	opacity: 0.5
+	opacity: 0.5;
+	-webkit-text-stroke: 2px black;
 }
 
 .icon {
@@ -52,7 +55,7 @@
 		object-fit: contain;
 	}
 	.bigheader{
-		font-size: 130px;
+		font-size: 90px;
 	}
 
 }
