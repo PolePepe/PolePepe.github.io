@@ -1,16 +1,17 @@
 .icon {
-  
-  max-width: 150px;
-  margin: 0 auto;
-  display: block;
+	height: 150px;
+	max-width: 150px;
+	object-fit: contain;
+	margin: 0 auto;
+	display: block;
 }
 
 .art_pic{
-   border-radius: 50%;
+ 	border-radius: 50%;
 }
 
 .services section {
-  text-align: center;
+	text-align: center;
 }
 
 
@@ -31,8 +32,24 @@
 		padding: 1rem 0;
 		border-bottom: 1px solid black;
 	}
-   .art_pic{
-	  width: 100px;
-	  height: 100px;
-   }
+	.art_pic{
+   		height: 67.5px;
+		width: 67.5px;
+		object-fit: contain;
+		
+	}
+
+}
+
+.article > [class*='col-'] {
+	display: flex;
+	flex-direction: column;
+}
+.row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row.display-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
 }
