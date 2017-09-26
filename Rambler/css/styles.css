@@ -33,10 +33,9 @@
 		border-bottom: 1px solid black;
 	}
 	.art_pic{
-   		height: 67.5px;
-		width: 67.5px;
+   		height: 100px;
+		width: 100px;
 		object-fit: contain;
-		
 	}
 
 }
@@ -48,4 +47,19 @@
 .row.display-flex > [class*='col-'] {
   display: flex;
   flex-direction: column;
+}
+
+.bgimage{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/75/Babylonian_marriage_market.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 200px;
+	margin-bottom: 5rem;
+}
+.bigheader{
+    color: #fff;
+    text-align: center;
+    font-size: 7vw;
+	font-weight: 900;
+	opacity: 0.5
 }
